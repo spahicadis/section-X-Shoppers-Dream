@@ -1,0 +1,64 @@
+* {
+  font-family: Poppins, sans-serif;;
+}
+
+body {
+  background-color: lightgray;
+}
+
+
+.operations-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: Poppins, sans-serif;
+  color: #9e55b0;
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+  color: black;
+  font-size: 25px;
+  font-weight: 500px;
+}
+
+
+.btns-css {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+button {
+  border: none;
+  background-color: white;
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+
+button:focus {
+  border: none;
+  background-color: white;
+  padding: 10px 15px;
+  background-color: #9e55b0;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
