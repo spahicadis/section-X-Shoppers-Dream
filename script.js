@@ -21,32 +21,37 @@ const content = [
 
 ]
 const img = document.querySelector('.img');
-const header = document.querySelector('.heder-rendered-js')
-const text = document.querySelector('.text-rendered-js')
-
-
-
-const buttons = document.querySelectorAll('.active')
-const buttonArr = [buttons[0],buttons[1],buttons[2]]
-
-function activeButtons() {
-  if(buttonArr[0]) {
-    img.innerHTML = content[0].img
-    header.innerHTML = content[0].heading
-    text.innerHTML = content[0].text
-  /*
-  } if(buttonArr[1]) {
-    img.innerHTML = content[1].img
-    header.innerHTML = content[1].heading
-    text.innerHTML = content[1].text
-    */
-  }
-}
+const header = document.querySelector('.heder-rendered-js');
+const text = document.querySelector('.text-rendered-js');
+const buttons = document.querySelectorAll('.active');
 
 
 buttons.forEach(function(btn){
-btn.addEventListener('click', activeButtons)
+btn.addEventListener('click', function(e) {
+  const id = e.target.id;
+
+  if(id == 0) {
+    img.innerHTML = content[id].img
+    header.innerHTML = content[id].heading
+    text.innerHTML = content[id].text
+  } else if (id == 1) {
+    img.innerHTML = content[id].img
+    header.innerHTML = content[id].heading
+    text.innerHTML = content[id].text
+   
+  } else if (id == 2) {
+    img.innerHTML = content[id].img
+    header.innerHTML = content[id].heading
+    text.innerHTML = content[id].text
+  } else if (id == 3) {
+    img.innerHTML = content[id].img
+    header.innerHTML = content[id].heading
+    text.innerHTML = content[id].text
+  } 
+}
+)
 });
+
 
 
 
