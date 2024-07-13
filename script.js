@@ -26,7 +26,7 @@ const text = document.querySelector('.text-rendered-js');
 const buttons = document.querySelectorAll('.active');
 
 //destructuring?
-
+/*
 buttons.forEach(function(btn){
 btn.addEventListener('click', e => {
     const id = e.target.id;
@@ -35,12 +35,26 @@ btn.addEventListener('click', e => {
     text.innerHTML = content[id].text
 
 })});
+*/
 
+buttons.forEach(((button, index) => button.addEventListener('click', function() {
+  img.innerHTML = content[index].img
+  header.innerHTML = content[index].heading
+  text.innerHTML = content[index].text
+})))
 
-/* probati na ovaj nacin da index argument postavim na activeIndex
-buttons.forEach((element, index, array) => {
-console.log(`${index + 1}: ${element}`);
-})
+/*
+const user = {
+  name: 'adis'
+}
+const { name } = user;
+*/
+
+/*
+const array = ['adis', 'nemanja']
+const [, sir] = array;
+
+console.log(sir);
 */
 
 
