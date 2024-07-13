@@ -25,37 +25,24 @@ const header = document.querySelector('.heder-rendered-js');
 const text = document.querySelector('.text-rendered-js');
 const buttons = document.querySelectorAll('.active');
 
+//destructuring?
 
 buttons.forEach(function(btn){
-btn.addEventListener('click', function(e) {
-  const id = e.target.id;
+btn.addEventListener('click', e => {
+    const id = e.target.id;
+    img.innerHTML = content[id].img
+    header.innerHTML = content[id].heading
+    text.innerHTML = content[id].text
 
-  if(id == 0) {
-    img.innerHTML = content[id].img
-    header.innerHTML = content[id].heading
-    text.innerHTML = content[id].text
-  } else if (id == 1) {
-    img.innerHTML = content[id].img
-    header.innerHTML = content[id].heading
-    text.innerHTML = content[id].text
-   
-  } else if (id == 2) {
-    img.innerHTML = content[id].img
-    header.innerHTML = content[id].heading
-    text.innerHTML = content[id].text
-  } else if (id == 3) {
-    img.innerHTML = content[id].img
-    header.innerHTML = content[id].heading
-    text.innerHTML = content[id].text
-  } 
-}
-)
-});
+})});
 
-//arrow test
-buttons.forEach(btns => {
-console.log(btns.id)
-  })
+
+/* probati na ovaj nacin da index argument postavim na activeIndex
+buttons.forEach((element, index, array) => {
+console.log(`${index + 1}: ${element}`);
+})
+*/
+
 
 
 
