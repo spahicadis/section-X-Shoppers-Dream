@@ -52,6 +52,12 @@ btn.addEventListener('click', function(e) {
 )
 });
 
+//arrow test
+buttons.forEach(btns => {
+console.log(btns.id)
+  })
+
+
 
 
 
